@@ -17,7 +17,7 @@
     },
     "tasks": [
         {
-            "label": "Build",
+            "label": "Build Intune WIN",
             "type": "shell",
             "command": "powershell",
             "args": [
