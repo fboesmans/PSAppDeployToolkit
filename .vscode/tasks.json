@@ -17,6 +17,21 @@
     },
     "tasks": [
         {
+            "label": "Sandbox",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${cwd}\\.vscode\\Sandbox.ps1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "AppDeployToolkitHelp",
             "type": "shell",
             "command": "powershell",
