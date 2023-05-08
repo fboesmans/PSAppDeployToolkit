@@ -107,15 +107,15 @@ Try {
     ##* VARIABLE DECLARATION
     ##*===============================================
     ## Variables: Application
-    [String]$appVendor = ''
-    [String]$appName = ''
-    [String]$appVersion = ''
-    [String]$appArch = ''
+    [String]$appVendor = 'AgileBits Inc'
+    [String]$appName = '1Password'
+    [String]$appVersion = '8.10.5'
+    [String]$appArch = 'x64'
     [String]$appLang = 'EN'
     [String]$appRevision = '01'
     [String]$appScriptVersion = '1.0.0'
-    [String]$appScriptDate = 'XX/XX/20XX'
-    [String]$appScriptAuthor = '<author name>'
+    [String]$appScriptDate = '08/05/2022'
+    [String]$appScriptAuthor = 'Freek Boesmans'
     ##*===============================================
     ## Variables: Install Titles (Only set here to override defaults set by the toolkit)
     [String]$installName = ''
@@ -182,7 +182,7 @@ Try {
         [String]$installPhase = 'Pre-Installation'
 
         ## Show Welcome Message, close Internet Explorer if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-        Show-InstallationWelcome -CloseApps 'iexplore' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
+        Show-InstallationWelcome -CloseApps '1Password' -AllowDefer -DeferTimes 3 -CheckDiskSpace -PersistPrompt
 
         ## Show Progress Message (with the default message)
         Show-InstallationProgress
@@ -206,7 +206,7 @@ Try {
         }
 
         ## <Perform Installation tasks here>
-
+        Execute-MSI -Action 'Install' -Path '1PasswordSetup-latest.msi' -Parameters '/qn /norestart ACCEPT_EULA=1 REBOOT=ReallySuppress'
 
         ##*===============================================
         ##* POST-INSTALLATION

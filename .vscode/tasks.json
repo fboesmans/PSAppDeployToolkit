@@ -17,6 +17,21 @@
     },
     "tasks": [
         {
+            "label": "Build",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${cwd}\\.vscode\\build.ps1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "Sandbox",
             "type": "shell",
             "command": "powershell",
