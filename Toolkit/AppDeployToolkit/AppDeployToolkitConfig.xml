@@ -64,7 +64,7 @@
         <!-- Specify filename of the icon. -->
         <LogoImage_Filename>AppDeployToolkitLogo.png</LogoImage_Filename>
         <!-- Specify filename of the logo. -->
-        <Banner_Filename>AppDeployToolkitBanner.png</Banner_Filename>
+        <Banner_Filename>MediahuisBanner.png</Banner_Filename>
         <!-- Specify filename of the banner. -->
         <Banner_MaxHeight>150</Banner_MaxHeight>
         <!-- Set a maximum banner height. Overflow will be invisible. -->
